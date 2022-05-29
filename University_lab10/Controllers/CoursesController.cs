@@ -17,7 +17,7 @@ namespace University_lab10.Controllers
         // GET: Courses
         public ActionResult Index()
         {
-            return View(db.Course.ToList());
+            return View(db.Course.Where(x => x.Enable == true).ToList());
         }
 
         // GET: Courses/Details/5
